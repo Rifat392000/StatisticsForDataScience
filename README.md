@@ -1,0 +1,2 @@
+# Statistics for Data Science
+The objective of the course is to introduce the statistical methods, techniques and tools that are essential for Data science domain. The course focuses on examining descriptive and inferential statistics and analyzing The output of these methods. The course also emphasizes techniques for result estimation and anomaly detection. Statistical machine learning methods that "learn" from data will be also introduced.
