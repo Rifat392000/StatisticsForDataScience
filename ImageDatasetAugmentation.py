@@ -1,4 +1,5 @@
 import os
+import random
 
 # Install required packages 
 os.system("pip install keras tensorflow scipy pillow numpy")
@@ -13,6 +14,7 @@ def get_file_names(inDir):
 
 def dataset_Augmentation(file_names, inDir, outDir, fName, fileFormat, numAug, input_width, input_height):
     for file_name in file_names:
+        
         # Construct the complete file path
         file_path = os.path.join(inDir, file_name)
 
@@ -31,11 +33,12 @@ def dataset_Augmentation(file_names, inDir, outDir, fName, fileFormat, numAug, i
 
         i = 0
         for batch in datagen.flow(x, batch_size=1,
-                                   save_to_dir=outDir, save_prefix=fName, save_format=fileFormat):
+                                   save_to_dir=outDir, save_prefix=fName+'_'+str(random.randint(1, 1000000)), save_format=fileFormat):
 
             i += 1
             if i > numAug-1:
                 break
+           
 
 def generate_ascii_art():
     ascii_art = """
