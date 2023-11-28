@@ -33,7 +33,7 @@ def dataset_Augmentation(file_names, inDir, outDir, fName, fileFormat, numAug, i
 
         i = 0
         for batch in datagen.flow(x, batch_size=1,
-                                   save_to_dir=outDir, save_prefix=fName+'_'+str(random.randint(1, 1000000)), save_format=fileFormat):
+                                   save_to_dir=outDir, save_prefix=fName+'_'+str(random.randint(1, 1000000000)), save_format=fileFormat):
 
             i += 1
             if i > numAug-1:
